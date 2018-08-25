@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "outDir": "out",
+        "lib": ["es5", "es2015", "dom", "scripthost"],
+        "rootDir": "src",
+        "strict": false,
+        "noUnusedLocals": false,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "sourceMap": true,
+    },
+    "exclude": [
+        "node_modules",
+        ".vscode-test"
+    ]
+}

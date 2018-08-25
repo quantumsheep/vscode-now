@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+ <title>now</title>
+ <desc>Created with Sketch.</desc>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="34" width="34" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g fill-rule="evenodd" fill="none" id="Page-1">
+   <g fill-rule="nonzero" fill="#FFFFFF" id="now">
+    <path id="Shape" d="m16.012543,1.648828l-15.887141,28.701771l31.749303,0l-15.862162,-28.701771zm-1.348909,5.795309l11.565639,21.257794l-23.306136,0l11.740496,-21.257794z"/>
+   </g>
+  </g>
+ </g>
+</svg>

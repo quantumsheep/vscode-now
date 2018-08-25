@@ -1,0 +1,126 @@
+{
+    "name": "esgiheader",
+    "displayName": "Now",
+    "description": "Now.sh implementation in VSCode",
+    "version": "1.0.0",
+    "publisher": "QuantumSheep",
+    "icon": "media/now.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/QuantumSheep/now-vscode"
+    },
+    "bugs": {
+        "url": "https://github.com/QuantumSheep/now-vscode/issues"
+    },
+    "homepage": "https://github.com/QuantumSheep/now-vscode",
+    "engines": {
+        "vscode": "^1.23.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "now",
+                    "title": "Now",
+                    "icon": "media/now.svg"
+                }
+            ]
+        },
+        "views": {
+            "now": [
+                {
+                    "id": "deployments",
+                    "name": "Deployments"
+                }
+            ]
+        },
+        "commands": [
+            {
+                "command": "deployments.deploy",
+                "category": "Now",
+                "title": "Deploy current working directory",
+                "icon": {
+                    "light": "media/light/deploy.svg",
+                    "dark": "media/dark/deploy.svg"
+                }
+            },
+            {
+                "command": "deployments.refresh",
+                "category": "Now",
+                "title": "Refresh list",
+                "icon": {
+                    "light": "media/light/refresh.svg",
+                    "dark": "media/dark/refresh.svg"
+                }
+            },
+            {
+                "command": "deployments.open",
+                "category": "Now",
+                "title": "Open"
+            },
+            {
+                "command": "deployments.remove",
+                "category": "Now",
+                "title": "Remove"
+            }
+        ],
+        "menus": {
+            "view/title": [
+                {
+                    "command": "deployments.deploy",
+                    "when": "view == deployments",
+                    "group": "navigation"
+                },
+                {
+                    "command": "deployments.refresh",
+                    "when": "view == deployments",
+                    "group": "navigation"
+                }
+            ],
+            "view/item/context": [
+                {
+                    "command": "deployments.open",
+                    "when": "view == deployments && viewItem == deployment",
+                    "group": "1"
+                },
+                {
+                    "command": "deployments.remove",
+                    "when": "view == deployments && viewItem == deployment",
+                    "group": "1"
+                },
+                {
+                    "command": "deployments.deploy",
+                    "when": "view == deployments",
+                    "group": "2"
+                },
+                {
+                    "command": "deployments.refresh",
+                    "when": "view == deployments",
+                    "group": "2"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.69",
+        "tslint": "^5.11.0",
+        "typescript": "^2.9.2",
+        "vscode": "^1.1.21"
+    },
+    "dependencies": {}
+}
